@@ -1,0 +1,47 @@
+main{
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 120px;
+    padding: 20px;
+}
+main h1{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--cor-primaria);
+    margin-bottom: 32px;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+    border: 2px solid var(--cor-secundaria);
+    margin-bottom: 32px;
+}
+form input{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    flex-grow: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+main ul {
+    list-style: none;
+}
+
+@media(max-width: 450px){
+    form{
+        flex-direction: column;
+        gap: 10px;
+        border: none;
+        align-items: stretch;
+    }
+    form input{
+        border: 2px solid var(--cor-secundaria);
+        border-radius: 1rem;
+    }
+}

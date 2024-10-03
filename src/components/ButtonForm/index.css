@@ -1,0 +1,11 @@
+.buttonForm{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    background: var(--cor-primaria);
+    color: #fff;
+    border: none;
+    padding: .5rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}

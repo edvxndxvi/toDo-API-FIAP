@@ -14,6 +14,7 @@ export const getData = async (setTargets: React.Dispatch<React.SetStateAction<Ta
   try {
     const response = await requestBase.get('Targets');
     setTargets(response.data);
+    console.log(response.data);
   } catch (error) {
     console.error('Erro na requisição:', error);
   }

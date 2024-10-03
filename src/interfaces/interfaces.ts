@@ -11,4 +11,5 @@ export interface Target {
     title: string;
     description: string;
     isComplete: boolean;
+    todos: Todo[]; 
 }
