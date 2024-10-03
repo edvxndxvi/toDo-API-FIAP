@@ -1,5 +1,5 @@
 .todo{
-    padding-left: 1rem;    
+    padding-inline: 1rem;    
 }
 .todoHeader{
     display: flex;
@@ -16,7 +16,22 @@
     display: flex;
     gap: 16px;
 }
+.todoButtons button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 .todoDescription{
     margin-left: 30px;
-    margin-bottom: 20px;
 }
+.custom-checkbox-todo {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #007BFF; 
+    display: inline-block;
+    border-radius: 50%; 
+    cursor: pointer;
+    position: relative; 
+}
+
+

@@ -32,6 +32,9 @@ form input{
 main ul {
     list-style: none;
 }
+.noTargets{
+    text-align: center;
+}
 
 @media(max-width: 450px){
     form{

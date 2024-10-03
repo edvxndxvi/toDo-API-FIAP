@@ -10,15 +10,16 @@ const requestBase = axios.create({
   },
 });
 
-export const getData = async (setTargets: React.Dispatch<React.SetStateAction<Target[] | undefined>>) => {
+export const getData = async (setTargets: React.Dispatch<React.SetStateAction<Target[]>>) => {
   try {
     const response = await requestBase.get('Targets');
-    setTargets(response.data);
-    console.log(response.data);
+    console.log('Resposta da API:', response.data);
+    setTargets(response.data); 
   } catch (error) {
     console.error('Erro na requisição:', error);
   }
 };
+
 
 export const postData = async () => {
   try {

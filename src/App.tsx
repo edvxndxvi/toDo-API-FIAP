@@ -3,9 +3,10 @@ import { useEffect, useState } from 'react';
 import { Target } from './interfaces/interfaces';  
 import { getData, postData } from './services/api'; 
 import ButtonForm from './components/ButtonForm/ButtonForm';
+import TargetItem from './components/TargetItem/TargetItem';
 
 function App() {
-  const [targets, setTargets] = useState<Target[] | undefined>([]); 
+  const [targets, setTargets] = useState<Target[]>([]);
   useEffect(() => {
     getData(setTargets);
   }, []);
@@ -17,9 +18,15 @@ function App() {
           <input type="text" placeholder='Arrumar a cama...'/>
           <ButtonForm conteudo='ADICIONAR'/>
         </form>
-        <ul>
-          
-        </ul>
+        {targets.length > 0 ? (
+          <ul>
+            {targets?.map((target) => (
+              <TargetItem key={target.id} target={target} />
+            ))}
+          </ul>
+        ) : (
+          <h4 className='noTargets'>Lista de Targets Vazia...</h4>
+        )}
       </main>
     </>
   )

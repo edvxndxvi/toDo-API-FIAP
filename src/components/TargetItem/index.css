@@ -2,6 +2,7 @@
     border-radius: 1rem;
     background-color: #111111;
     padding: 1rem;    
+    margin-bottom: 20px;
 }
 .targetHeader{
     display: flex;
@@ -18,7 +19,56 @@
     display: flex;
     gap: 16px;
 }
+.targetButtons button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 .targetDescription{
     margin-left: 30px;
     margin-bottom: 32px;
+}
+.target ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+.noTodos{
+    text-align: center;
+    color: var(--cor-secundaria);
+    margin-bottom: 32px;
+}
+.addIcon{
+    width: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007BFF; 
+    display: inline-block;
+    border-radius: 50%; 
+    cursor: pointer;
+    position: relative; 
+}
+
+input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: #007BFF; 
+}
+
+input[type="checkbox"]:checked + .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px; 
+    height: 10px; 
+    background-color: white; 
+    border-radius: 2px; 
 }
