@@ -1,0 +1,22 @@
+.todo{
+    padding-left: 1rem;    
+}
+.todoHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.todoContent{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.todoButtons{
+    display: flex;
+    gap: 16px;
+}
+.todoDescription{
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
