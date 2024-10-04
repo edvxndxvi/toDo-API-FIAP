@@ -5,7 +5,7 @@ import excluirIcon from '../../assets/excluir-icon.svg';
 import editarIcon from '../../assets/editar-icon.svg';
 import addIcon from '../../assets/add-icon.svg';
 
-function TargetItem(props: {target: Target}){
+function TargetItem(props: { target: Target; onDelete: (id: number) => void }) {
     const todos = props.target.todos || [];
     return(
         <>
@@ -18,7 +18,7 @@ function TargetItem(props: {target: Target}){
                         <h3>{props.target.title}</h3>
                         </div>
                         <div className='targetButtons'>
-                        <button><img src={excluirIcon} alt="" /></button>
+                        <button onClick={() => props.onDelete(props.target.id)}><img src={excluirIcon} alt="" /></button>
                         <button><img src={editarIcon} alt="" /></button>
                         </div>
                     </div>

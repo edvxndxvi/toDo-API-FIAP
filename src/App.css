@@ -15,7 +15,7 @@ form{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     border: 2px solid var(--cor-secundaria);
     margin-bottom: 32px;
 }

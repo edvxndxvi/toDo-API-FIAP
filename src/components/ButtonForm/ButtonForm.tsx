@@ -1,13 +1,11 @@
-import './index.css'
+import './index.css';
 
-function ButtonForm(props:{
-    conteudo: string
-}){
-    return(
-        <>
-            <button className='buttonForm'>{props.conteudo}</button>
-        </>
-    )
+function ButtonForm(props: { conteudo: string; onClick: () => void }) {
+    return (
+        <button className='buttonForm' onClick={props.onClick}>
+            {props.conteudo}
+        </button>
+    );
 }
 
-export default ButtonForm
+export default ButtonForm;

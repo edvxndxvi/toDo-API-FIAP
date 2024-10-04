@@ -20,17 +20,28 @@ export const getData = async (setTargets: React.Dispatch<React.SetStateAction<Ta
   }
 };
 
-
-export const postData = async () => {
+export const postTarget = async (title: string, description: string, isComplete: boolean) => {
   try {
-    const response = await requestBase.post('targets', {
-      title: 'Demo da aula',
-      description: 'Mostrando como fazer um post com axios',
-      isComplete: false,
-      todo: []
+    const response = await requestBase.post('Targets', {
+      title: title,
+      description: description,
+      isComplete: isComplete,
+      todos: [] 
     });
-    console.log(response.data);
+
+    return response.data;
   } catch (error) {
-    console.error('Erro na requisição:', error);
+    console.error('Erro ao adicionar target:', error);
+    throw error; 
+  }
+};
+
+export const deleteTarget = async (id: number) => {
+  try {
+    await requestBase.delete(`Targets/${id}`);
+    console.log(`Target com id ${id} deletado com sucesso!`);
+  } catch (error) {
+    console.error('Erro ao deletar target:', error);
+    throw error;
   }
 };

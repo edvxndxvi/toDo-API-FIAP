@@ -33,5 +33,16 @@
     cursor: pointer;
     position: relative; 
 }
-
+input[type="checkbox"]:checked + .custom-checkbox-todo::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    width: 5px; 
+    height: 9px; 
+    transform: rotate(-145deg);
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-radius: 2px; 
+}
 
