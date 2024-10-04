@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Target } from '../interfaces/interfaces' 
+import { Target, Todo } from '../interfaces/interfaces' 
 
 const baseUrl = 'https://todo-caio.azurewebsites.net/api/';
 
@@ -42,6 +42,16 @@ export const deleteTarget = async (id: number) => {
     console.log(`Target com id ${id} deletado com sucesso!`);
   } catch (error) {
     console.error('Erro ao deletar target:', error);
+    throw error;
+  }
+};
+
+export const addTodoToTarget = async (targetId: number, todo: Todo) => {
+  try {
+    const response = await requestBase.post(`Targets/${targetId}/todos`, todo);
+    return response.data; // Retorna o novo Todo adicionado
+  } catch (error) {
+    console.error('Erro ao adicionar todo ao target:', error);
     throw error;
   }
 };
